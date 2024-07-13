@@ -17,4 +17,25 @@ Programa de consola que gestiona el nombre, apellido, teléfono y correo de dist
 
 ## Instalación
 
+Despues de descargar o clonar el repositorio, se debe compilar el código con GCC. 
+
+#### Usando Makefile
+Para usar este metodo, ademas de GCC, debe estar disponible la herramienta "Make". Todos los comandos necesarios serán ejecutados de forma automatica.
+```bash
+make gestor
+```
+#### Compilar manualmente
+Comandos necesarios para compilar manualmente el proyecto:
+```bash
+mkdir -p ./build
+windres res/resource.rc -O coff -o build/resource.o
+gcc -I./include -c src/main.c -o build/main.o
+gcc -I./include -c src/menu.c -o build/menu.o
+gcc -I./include -c src/consola.c -o build/consola.o
+gcc -I./include -c src/contact.c -o build/contact.o
+gcc -I./include -c src/list.c -o build/list.o
+gcc -I./include -c src/draw.c -o build/draw.o
+gcc -o gestor ./build/main.o ./build/menu.o ./build/consola.o ./build/contact.o ./build/list.o ./build/draw.o ./build/resource.o -I./include
+```
+
 ## Capturas
