@@ -17,10 +17,10 @@ Programa de consola que gestiona el nombre, apellido, teléfono y correo de dist
 
 ## Instalación
 
-Despues de descargar o clonar el repositorio, se debe compilar el código con GCC. 
+Después de descargar o clonar el repositorio, se debe compilar el código con GCC. 
 
 #### Usando Makefile
-Para usar este metodo, ademas de GCC, debe estar disponible la herramienta "Make". Todos los comandos necesarios serán ejecutados de forma automatica.
+Para usar este método, además de GCC, debe estar disponible la herramienta "Make". Todos los comandos necesarios serán ejecutados de forma automática.
 ```bash
 make gestor
 ```
