@@ -27,25 +27,25 @@ $(EXECUTABLE): $(OBJ)
 	$(CC) -o $@ $(OBJ) $(CFLAGS)
 
 # Compilar archivos fuente a archivos objeto
-$(BUILD_DIR)/main.o: $(SRC_DIR)/main.c $(INCLUDE_DIR)/menu.h $(INCLUDE_DIR)/consola.h $(INCLUDE_DIR)/contactlist.h
+$(BUILD_DIR)/main.o: $(SRC_DIR)/main.c $(INCLUDE_DIR)/menu.h $(INCLUDE_DIR)/consola.h $(INCLUDE_DIR)/contactlist.h | create_dirs
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(BUILD_DIR)/menu.o: $(SRC_DIR)/menu.c $(INCLUDE_DIR)/menu.h $(INCLUDE_DIR)/consola.h
+$(BUILD_DIR)/menu.o: $(SRC_DIR)/menu.c $(INCLUDE_DIR)/menu.h $(INCLUDE_DIR)/consola.h | create_dirs
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(BUILD_DIR)/consola.o: $(SRC_DIR)/consola.c $(INCLUDE_DIR)/consola.h $(INCLUDE_DIR)/menu.h
+$(BUILD_DIR)/consola.o: $(SRC_DIR)/consola.c $(INCLUDE_DIR)/consola.h $(INCLUDE_DIR)/menu.h | create_dirs
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(BUILD_DIR)/contact.o: $(SRC_DIR)/contact.c $(INCLUDE_DIR)/contactlist.h $(INCLUDE_DIR)/consola.h $(INCLUDE_DIR)/menu.h $(INCLUDE_DIR)/draw.h
+$(BUILD_DIR)/contact.o: $(SRC_DIR)/contact.c $(INCLUDE_DIR)/contactlist.h $(INCLUDE_DIR)/consola.h $(INCLUDE_DIR)/menu.h $(INCLUDE_DIR)/draw.h | create_dirs
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(BUILD_DIR)/list.o: $(SRC_DIR)/list.c $(INCLUDE_DIR)/contactlist.h $(INCLUDE_DIR)/consola.h $(INCLUDE_DIR)/menu.h $(INCLUDE_DIR)/draw.h
+$(BUILD_DIR)/list.o: $(SRC_DIR)/list.c $(INCLUDE_DIR)/contactlist.h $(INCLUDE_DIR)/consola.h $(INCLUDE_DIR)/menu.h $(INCLUDE_DIR)/draw.h | create_dirs
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(BUILD_DIR)/draw.o: $(SRC_DIR)/draw.c $(INCLUDE_DIR)/draw.h $(INCLUDE_DIR)/consola.h
+$(BUILD_DIR)/draw.o: $(SRC_DIR)/draw.c $(INCLUDE_DIR)/draw.h $(INCLUDE_DIR)/consola.h | create_dirs
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(BUILD_DIR)/resource.o: $(RES_DIR)/resource.rc
+$(BUILD_DIR)/resource.o: $(RES_DIR)/resource.rc | create_dirs
 	windres $< -O coff -o $@
 
 # Crear directorios necesarios

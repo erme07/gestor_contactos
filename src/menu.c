@@ -8,7 +8,8 @@
 void menu(int opcion){
     system("cls");
 	setConsoleColor(yellow);
-	printf("\n\t\t\t GESTOR DE CONTACTOS \n\n");
+    //setCursorPos(48, 5);
+    printf("\n GESTOR DE CONTACTOS\n\n");
 	setConsoleColor(initial);
 	switch(opcion){
         case 1: opcOneSelec(); break;
@@ -35,6 +36,7 @@ int defineOption(int key, int opt){
 }
 
 void opcOneSelec(){
+    //setCursorPos(48, 8);
 	setConsoleColor(orange);
     printf(" %s1) Agregar Contacto\n",ESP);
     setConsoleColor(initial);

@@ -1,5 +1,5 @@
 #include <windows.h>
-//#include <stdio.h>
+#include <stdio.h>
 #include "consola.h"
 //#include "menu.h"
 
@@ -16,6 +16,8 @@ void initConsole(){
 	orange = FGRED | FGGREEN;
 	yellow = FGRED | FGGREEN | FGINT;
 	red = FGRED | FGINT;
+    COORD newSize={150,100};
+    SetConsoleScreenBufferSize(hConsole, newSize);
 }
 void setConsoleColor(WORD color) {
     SetConsoleTextAttribute(hConsole, color);
