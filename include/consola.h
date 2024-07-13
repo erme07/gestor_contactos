@@ -1,6 +1,7 @@
 #ifndef _COLOR_
 #define _COLOR_
 
+#include <windows.h>
 //COLORES PARA CONSOLA
 #define FGRED 	FOREGROUND_RED
 #define FGBLUE 	FOREGROUND_BLUE
@@ -25,5 +26,5 @@ void disableResize(void);
 void setConsoleSize(int,int);
 void setCursorPos(int,int); 
 void changeIcon(void);        
-	
+
 #endif //_COLOR_
