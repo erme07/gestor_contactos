@@ -39,3 +39,7 @@ gcc -o gestor ./build/main.o ./build/menu.o ./build/consola.o ./build/contact.o 
 ```
 
 ## Capturas
+
+![preview](img/preview-a.jpg)
+![preview](img/preview-b.jpg)
+![preview](img/preview-c.jpg)
