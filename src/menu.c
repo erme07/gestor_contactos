@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
+//#include <windows.h>
 #include <conio.h>
 #include "consola.h"
 #include "menu.h"
@@ -8,7 +8,7 @@
 void menu(int opcion){
     system("cls");
 	setConsoleColor(yellow);
-	printf("\n\t\t\t AGENDA ELECTR%cNICA \n\n",224);
+	printf("\n\t\t\t GESTOR DE CONTACTOS \n\n");
 	setConsoleColor(initial);
 	switch(opcion){
         case 1: opcOneSelec(); break;
@@ -78,9 +78,11 @@ void opcSixSelec(){
 //-------------
 
 void menuEdit(int opcion){
-	setConsoleColor(yellow);
-	printf("\n DATOS EDITABLES \n\n");
-	setConsoleColor(initial);
+	setConsoleColor(orange);
+	printf("\n EDICI%cN DE CONTACTO \n\n",224);
+    setConsoleColor(yellow);
+    printf(" Seleccione el dato que quiere editar:\n\n");
+    setConsoleColor(initial);
 	switch(opcion){
         case 1: opcNameEdit(); break;
         case 2: opcSurnameEdit(); break;
@@ -141,9 +143,11 @@ void opcExitEdit(){
 //-------------
 
 void menuDelete(int opcion){
-	setConsoleColor(yellow);
+	setConsoleColor(orange);
 	printf("\n ELIMINAR CONTACTO \n\n");
-	setConsoleColor(initial);
+    setConsoleColor(yellow);
+    printf(" Quiere eliminar el contacto seleccionado?\n\n");
+    setConsoleColor(initial);
 	switch(opcion){
         case 1: opcCancel(); break;
         case 2: opcConfirm(); break;

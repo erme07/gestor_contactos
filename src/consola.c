@@ -1,7 +1,7 @@
 #include <windows.h>
-#include <stdio.h>
+//#include <stdio.h>
 #include "consola.h"
-#include "menu.h"
+//#include "menu.h"
 
 //VARIABLES GLOBALES PARA MANEJAR CONSOLA
 HANDLE hConsole;
