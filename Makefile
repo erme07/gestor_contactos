@@ -1,5 +1,5 @@
 # Nombre del ejecutable
-EXECUTABLE=agenda
+EXECUTABLE=gestor
 
 # Directorios
 SRC_DIR=./src
